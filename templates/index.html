@@ -53,14 +53,14 @@
                 }
             
                 $.ajax({
-                type: 'POST', // 타입을 작성합니다.
-                url: '/orders', // url을 작성합니다.
+                type: 'POST', 
+                url: '/orders', 
                 data: {
                     name_give: name, 
                     qty_give: qty, 
                     addr_give: addr,
                     num_give: num
-                }, // data를 작성합니다. },
+                }, 
                 success: function (response) {
                     if (response['result'] == 'success') {
                         alert(response['msg']);
@@ -71,9 +71,6 @@
             }
 
             function listing() {
-            // 1. 리뷰 목록을 서버에 요청하기
-            // 2. 요청 성공 여부 확인하기
-            // 3. 요청 성공했을 때 리뷰를 올바르게 화면에 나타내기
             $.ajax({
                 type: "GET",
                 url: "/orders",
@@ -106,7 +103,6 @@
 
     <body class="text-center">
         <div class="shopping_page">
-        <!--<img class="ice-americano" src="https://image.istarbucks.co.kr/upload/store/skuimg/2015/08/[110563]_20150813222100205.jpg" alt="" width="300" height="300">-->
         <img src="{{ url_for('static', filename='iceamericano.jpg') }}"/>
         <h1 class="h4 mt-3"> 아이스 아메리카노(Tall) <span class="badge badge-success">인기</span></h1>
         
